@@ -1,5 +1,25 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background: darkgreen;
+}
+.wrapper{
+    height: 800px;
+    width:auto;
+}
+
+.card{
+    width: 12rem;
+}
+
+.top-suit, .bottom-suit{
+    font-size: 4em;
+}
+
+.value{
+    font-size:3em;
+}
+
+.bottom-suit{
+    transform: rotate(180deg);
 }
