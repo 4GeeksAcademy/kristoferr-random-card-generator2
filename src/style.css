@@ -4,12 +4,14 @@ body{
     background: darkgreen;
 }
 .wrapper{
-    height: 800px;
+    height: 400px;
     width:auto;
 }
 
 .card{
     width: 12rem;
+    border:50px;
+    box-shadow: 10px 10px;
 }
 
 .top-suit, .bottom-suit{

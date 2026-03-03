@@ -19,6 +19,41 @@ import "./assets/img/4geeks.ico";
 
   //displayCard();
 
+  function createCard(){
+
+    //document.querySelector('.wrapper').innerHTML = 
+    const card = document.createElement("div");
+    
+    card.innerHTML = 
+    `
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 d-flex justify-content-center">
+          <div class="card mt-5">
+            <div><span class="top-suit float-start ms-3">club</span></div>
+            <div class="value">3</div>
+            <div><span class="bottom-suit float-end me-3">club</span></div>
+          </div>
+        </div>
+        <div class="col-4"></div>
+      </div>
+    `;
+
+    document.body.appendChild(card);
+
+    console.log(card);
+
+    getSuitAndValue();
+  }
+
+
+  //createCard();
+
+  const createBtn = document.querySelector('.btn2');
+
+  //regular function call to deal card button
+  createBtn.addEventListener('click', createCard);
+
   
   // function 0 -> will render card on the screen
   function displayCard(){
@@ -95,8 +130,6 @@ import "./assets/img/4geeks.ico";
 
 
   
-
-
 
 //};
 
