@@ -5,7 +5,7 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-//window.onload = function() {
+
 
   const buttonElem = document.querySelector('.btn');
 
@@ -21,6 +21,17 @@ import "./assets/img/4geeks.ico";
 
   function createCard(){
 
+    const suits = ['♠', '♥', '♣', '♦'];
+    const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+  
+    const randomSuitIndex = Math.floor(Math.random() * suits.length); 
+    const randomValueIndex = Math.floor(Math.random() * values.length); 
+
+    const drawnCard = {
+      suit: suits[randomSuitIndex],
+      value: values[randomValueIndex],
+    };
+    
     //document.querySelector('.wrapper').innerHTML = 
     const card = document.createElement("div");
     
@@ -30,9 +41,9 @@ import "./assets/img/4geeks.ico";
         <div class="col-4"></div>
         <div class="col-4 d-flex justify-content-center">
           <div class="card mt-5">
-            <div><span class="top-suit float-start ms-3">club</span></div>
-            <div class="value">3</div>
-            <div><span class="bottom-suit float-end me-3">club</span></div>
+            <div><span class="top-suit float-start ms-3">${drawnCard.suit}</span></div>
+            <div class="value">${drawnCard.value}</div>
+            <div><span class="bottom-suit float-end me-3">${drawnCard.suit}</span></div>
           </div>
         </div>
         <div class="col-4"></div>
@@ -43,7 +54,7 @@ import "./assets/img/4geeks.ico";
 
     console.log(card);
 
-    getSuitAndValue();
+    //getSuitAndValue();
   }
 
 
@@ -131,6 +142,6 @@ import "./assets/img/4geeks.ico";
 
   
 
-//};
+
 
 
