@@ -37,22 +37,30 @@ import "./assets/img/4geeks.ico";
     
     card.innerHTML = 
     `
-      <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4 d-flex justify-content-center">
+      <div class="row" style="float:left;">
+        <div class="col-2"></div>
+        <div class="col-8 d-flex justify-content-center">
           <div class="card mt-5">
             <div><span class="top-suit float-start ms-3">${drawnCard.suit}</span></div>
             <div class="value">${drawnCard.value}</div>
             <div><span class="bottom-suit float-end me-3">${drawnCard.suit}</span></div>
           </div>
         </div>
-        <div class="col-4"></div>
+        <div class="col-2"></div>
       </div>
     `;
 
-    document.body.appendChild(card);
+    //document.body.appendChild(card);
+    document.querySelector(".wrapper").append(card);
 
-    console.log(card);
+    if(card.querySelector('.top-suit').innerHTML === '♥' || card.querySelector('.top-suit').innerHTML === '♦'){
+      //console.log("inside if statement");
+      card.querySelector('.top-suit').style = 'color:red';
+      card.querySelector('.bottom-suit').style = 'color:red';
+      //drawnCard.bottomSuit.style = 'color:red';
+    }
+
+    //console.log(card);
 
     //getSuitAndValue();
   }
